@@ -1,0 +1,22 @@
+/*----------------------------Tempurature.cpp----------------------------------------------------------
+|  Author: Nicholas Jones                                                                             |
+|  Purpose: Change user input of tempurature from Celsius to Fahrenheit                               | 
+|  Dependencies: Standard C++                                                                         |
+|  Known Bugs: N/A                                                                                    |
+|  Licensing Information: You are free to use or extend this project for educational purposes         |
+------------------------------------------------------------------------------------------------------*/
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+double Celsius;
+double Fahrenheit;
+
+int main()
+{
+  cout << "Please enter a number in Celsius and we will convert it to Fahrenheit" << endl;
+  cin >> Celsius;
+  Fahrenheit = Celsius * 9/5 + 32;
+  cout << Celsius << " Celsius is " << Fahrenheit << " in Fahrenheit" << endl;
+}
