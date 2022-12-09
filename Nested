@@ -1,6 +1,6 @@
-/*----------------------------Increment.cpp------------------------------------------------------------
+/*----------------------------Nested.cpp---------------------------------------------------------------
 |  Author: Nicholas Jones                                                                             |
-|  Purpose: Simple program to increment by 5 until 50 has been reached                                | 
+|  Purpose: While loops for 50 by 5 and 100 by 1                                                      | 
 |  Dependencies: Standard C++                                                                         |
 |  Known Bugs: N/A                                                                                    |
 |  Licensing Information: You are free to use or extend this project for educational purposes         |
@@ -13,9 +13,12 @@ using namespace std;
 int main()
 {
     int i = 0;
-        
-    while (i <= 50) {
+    while (i <= 45) {              
+        cout << i << " " << endl;  
+        i+=5;                      
+    }                              
+    while (i <= 100) {
         cout << i << " " << endl;
-        i+=5;
+        i+=1;
     }
 }
