@@ -1,0 +1,21 @@
+/*----------------------------Tempurature.cpp----------------------------------------------------------
+|  Author: Nicholas Jones                                                                             |
+|  Purpose: Simple program to increment by 5 until 50 has been reached                                | 
+|  Dependencies: Standard C++                                                                         |
+|  Known Bugs: N/A                                                                                    |
+|  Licensing Information: You are free to use or extend this project for educational purposes         |
+------------------------------------------------------------------------------------------------------*/
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    int i = 0;
+        
+    while (i <= 50) {
+        cout << i << " " << endl;
+        i+=5;
+    }
+}
