@@ -1,3 +1,10 @@
+/*----------------------------Taxrate.cpp--------------------------------------------------------------
+|  Author: Nicholas Jones                                                                             |
+|  Purpose: Simple program to calculate taxrate                                                       | 
+|  Dependencies: Standard C++                                                                         |
+|  Known Bugs: N/A                                                                                    |
+|  Licensing Information: You are free to use or extend this project for educational purposes         |
+------------------------------------------------------------------------------------------------------*/
 #include <iostream>
 #include <string>
 #include <iomanip>
