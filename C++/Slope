@@ -1,0 +1,31 @@
+/*----------------------------Slope.cpp----------------------------------------------------------------
+|  Author: Nicholas Jones                                                                             |
+|  Purpose: Calculate Slope for two lines                                                             | 
+|  Dependencies: Standard C++                                                                         |
+|  Known Bugs: N/A                                                                                    |
+|  Licensing Information: You are free to use or extend this project for educational purposes         |
+------------------------------------------------------------------------------------------------------*/
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int x1;
+    int x2;
+    int y1;
+    int y2;
+    cout << "Enter a x coordinate for point 1" << endl;
+    cin >> x1;
+    cout << "Enter a y coordinate for point 1" << endl;
+    cin >> y1;
+    cout << "Enter a x coordinate for point 2" << endl;
+    cin >> x2;
+    cout << "Enter a y coordinate for point 2" << endl;
+    cin >> y2;
+    double rise = (y2-y1);
+    double run = (x2-x1);
+    double m = static_cast<double>(y2-y1)/static_cast<double>(x2-x1);
+    cout << "The slope of the line for input point (" << x1 << "," << y1 << ") and point 2 (" << x2 << "," << y2 << ") is " << rise << "/" << run << ", which is " << m << endl;
+    return 0;
+}
