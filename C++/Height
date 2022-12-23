@@ -1,0 +1,48 @@
+/*----------------------------Height.cpp---------------------------------------------------------------
+|  Author: Nicholas Jones                                                                             |
+|  Purpose: This program will convert feet, inches, centimeters, and meters                           |
+|  Dependencies: Standard C++                                                                         |
+|  Known Bugs: N/A                                                                                    |
+|  Licensing Information: You are free to use or extend this project for educational purposes         |
+------------------------------------------------------------------------------------------------------*/
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    //Declaring Variables
+    string name1, name2;
+    int feet1, feet2, inches1, inches2;
+
+    //Ask for user input
+    cout << "Enter person 1 first name: ";
+    cin >> name1;
+    cout << "Enter person 1 feet      : ";
+    cin >> feet1;
+    cout << "Enter person 1 inches    : ";
+    cin >> inches1;
+    cout << "Enter person 2 first name: ";
+    cin >> name2;
+    cout << "Enter person 2 feet      : ";
+    cin >> feet2;
+    cout << "Enter person 2 inches    : ";
+    cin >> inches2;
+
+    //Convert
+    double centimeters1 = inches1 * 2.54;
+    double centimeters2 = inches2 * 2.54;
+    double meters1 = centimeters1 / 100;
+    double meters2 = centimeters2 / 100;
+
+    //Output
+    cout << "Name        Feet   Inches   Centimeters   Meters" << endl;
+    cout << "=========== ====   ======   ===========   ======" << endl;
+    cout << name1 << setprecision(1) << fixed << setw(8) << feet1 << setw(8) << inches1 << setw(12) << centimeters1 << setw(12) << setprecision(3) << meters1 << endl;
+    cout << name2 << setprecision(1) << fixed << setw(10) << feet2 << setw(8) << inches2 << setw(12) << centimeters2 << setw(12) << setprecision(3) << meters2 << endl;
+
+    return 0;
+
+}
