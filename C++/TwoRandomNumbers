@@ -1,0 +1,41 @@
+/*----------------------------TwoRandomNumbers.cpp-----------------------------------------------------
+|  Author: Nicholas Jones                                                                             |
+|  Purpose: This program will add and multiply two random numbers                                     |
+|  Dependencies: Standard C++                                                                         |
+|  Known Bugs: N/A                                                                                    |
+|  Licensing Information: You are free to use or extend this project for educational purposes         |
+------------------------------------------------------------------------------------------------------*/
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+    unsigned seed;
+	seed = time(0);
+	srand(seed);
+	const int MIN_VALUE = 20;
+	const int MAX_VALUE = 50;
+
+
+	int a = rand() % (MAX_VALUE - MIN_VALUE + 1);
+	int	b = rand() % (MAX_VALUE - MIN_VALUE + 1);
+	
+	cout << "First number = " << a << endl;
+
+	cout << "Second number = " << b << endl;
+
+	cout << static_cast<int>(a);
+	cout << '+';
+	cout << static_cast<int>(b);
+	cout << '=';
+	cout << static_cast<int>(a + b) << endl;
+
+	cout << static_cast<int>(a);
+	cout << '*';
+	cout << static_cast<int>(b);
+	cout << '=';
+	cout << static_cast<int>(a * b) << endl;
+	return 0;
+}
