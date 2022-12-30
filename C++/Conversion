@@ -1,0 +1,85 @@
+/*----------------------------Conversion.cpp------------------------------------------------------------
+|  Author: Nicholas Jones                                                                             |
+|  Purpose: This program will convert feet and inches to meters and centimeters                       | 
+|  Dependencies: Standard C++                                                                         |
+|  Known Bugs: N/A                                                                                    |
+|  Licensing Information: You are free to use or extend this project for educational purposes         |
+------------------------------------------------------------------------------------------------------*/
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+//Global constant
+const double CON_FACT = 0.3048;
+
+//Function prototypes
+bool getInput(int&, int&);
+void doConversion(int&, int&, int&, int&);
+void putOutput(int&, int&);
+
+/* entry point for program */
+/* loop example taken from page 266 */
+int main()
+{
+	int feet = 0;
+	int inches = 0;
+	int centimeters = 0;
+	int meters = 0;
+	char again;
+	do
+	{
+		bool test = getInput(feet, inches);
+		if ( test == true)
+		{
+			doConversion(feet, inches, meters, centimeters);
+			putOutput(meters, centimeters);
+		}
+		else
+		{
+			cout << "Must be valid positive integer(s)!" << endl;
+		}
+		cout << "Do you want to run again? ";
+		cin >> again;
+	} while (again == 'Y' || again == 'y');
+	cout << "Goodbye!" << endl;
+	return 0;
+}
+
+/* this function requests input feet & inches */
+bool getInput(int &feet, int &inches)
+{
+	bool posNum = true;
+	cout << "Enter feet: ";
+	cin >> feet;
+	cout << "Enter inches: ";
+	cin >> inches;
+	// this for negative numbers
+	if (feet < 0 || inches < 0)
+		posNum = false;
+	return posNum;
+}
+
+/* this function converts feet/inches to meters/centimeters */
+void doConversion(int &feet, int &inches, int &meters, int &centimeters)
+{
+	// put feet and inches into inches and convert to centimeters 
+	double _cm = (feet * 12 + inches) * 2.54;
+	// divide centimeters by 100 to get the meters 
+	meters = _cm / 100;
+	// subtract the calculated meters to leave the remaining centimeters 
+	_cm = _cm - (meters * 100);
+	// round and return the centimeters 
+	centimeters = round(_cm);
+	return;
+}
+
+/* this function output result to screen */
+void putOutput(int &meters, int &cm)
+{
+	cout << "Result of conversion: " << static_cast<int>(meters);
+	cout << " meter(s) and " << static_cast<double>(cm);
+	cout << " centimeters" << endl;
+	return;
+
+}
