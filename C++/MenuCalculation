@@ -1,7 +1,7 @@
 /*-----------------------------------MenuCalculation.cpp-----------------------------------------------
 |  Author: Nicholas Jones                                                                             |
 |  Purpose: This program will calculate addition, subtraction, multiplication, division, and modulus  |
-|           based on user input                                                                       |
+|           between two numbers based on user input                                                   |
 |  Dependencies: Standard C++                                                                         |
 |  Known Bugs: N/A                                                                                    |
 |  Licensing Information: You are free to use or extend this project for educational purposes         |
