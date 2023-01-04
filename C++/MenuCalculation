@@ -1,0 +1,80 @@
+/*-----------------------------------MenuCalculation.cpp-----------------------------------------------
+|  Author: Nicholas Jones                                                                             |
+|  Purpose: This program will calculate addition, subtraction, multiplication, division, and modulus  |
+|           based on user input                                                                       |
+|  Dependencies: Standard C++                                                                         |
+|  Known Bugs: N/A                                                                                    |
+|  Licensing Information: You are free to use or extend this project for educational purposes         |
+------------------------------------------------------------------------------------------------------*/
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    char menuChoice;
+    int leftOperand, rightOperand;
+    int equals;
+
+    cout << "*** MAIN MENU ***" << endl;
+    cout << "A. Addition" << endl;
+    cout << "B. Subtraction" << endl;
+    cout << "C. Multiplication" << endl;
+    cout << "D. Division" << endl;
+    cout << "E. Modulus" << endl;
+
+    cout << "Enter menu choice:" << endl;
+    cin >> menuChoice;
+
+    if (menuChoice == 'A' || menuChoice == 'a' || menuChoice == 'B' || menuChoice == 'b' ||
+    menuChoice == 'C' || menuChoice == 'c' || menuChoice == 'D' || menuChoice == 'd' || menuChoice == 'E' || menuChoice == 'e') {
+    } else {
+        cout << "Invalid menu choice, try again." << endl;
+        return 0;
+    }
+
+
+    //cout << endl;
+    cout << "Enter left operand:" << endl;
+    cin >> leftOperand;
+    //cout << endl;
+    cout << "Enter right operand:" << endl;
+    cin >> rightOperand;
+    //cout << endl;
+
+    if (menuChoice == 'A' || menuChoice == 'a') {
+        equals = leftOperand + rightOperand;
+        cout << leftOperand << " + " << rightOperand << " = " << equals;
+    }
+
+    else if (menuChoice == 'B' || menuChoice == 'b') {
+        equals = leftOperand - rightOperand;
+        cout << leftOperand << " - " << rightOperand << " = " << equals;
+    }
+
+    else if (menuChoice == 'C' || menuChoice == 'c') {
+        equals = leftOperand * rightOperand;
+        cout << leftOperand << " * " << rightOperand << " = " << equals;
+    }
+
+    else if (menuChoice == 'D' || menuChoice == 'd') {
+        equals = leftOperand / rightOperand;
+        cout << leftOperand << " / " << rightOperand << " = " << equals;
+    }
+
+    else if (menuChoice == 'E' || menuChoice == 'e') {
+        equals = leftOperand % rightOperand;
+        cout << leftOperand << " % " << rightOperand << " = " << equals;
+    }
+
+    else {
+        cout << "Invalid menu choice, try again." << endl;
+    }
+    cout << endl;
+
+    return 0;
+
+}
