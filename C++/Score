@@ -1,0 +1,63 @@
+/*---------------------------------------Score.cpp-----------------------------------------------------
+|  Author: Nicholas Jones                                                                             |
+|  Purpose: This program will return the average of test scores based on user input                   | 
+|  Dependencies: Standard C++                                                                         |
+|  Known Bugs: N/A                                                                                    |
+|  Licensing Information: You are free to use or extend this project for educational purposes         |
+------------------------------------------------------------------------------------------------------*/
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+double numberOfTests, testScore, sum;
+double x = 1;
+double average = 0, min = 100, max = 0;
+double n = 0;
+cout << "Enter the number of tests : ";
+cin >> numberOfTests;
+cout << endl;
+
+if (numberOfTests <=0) {
+    cout << "Number of tests must be grater than 1." << endl;
+    return 0;
+}
+
+
+while (x <= numberOfTests){
+    cout << "Enter test score (0 - 100): ";
+    cin >> testScore;
+    cout << endl;
+
+    if (testScore < 0 || testScore > 100) {
+        cout << "Score out of range, try again: ";
+        cin >> testScore;
+        cout << endl;
+    }
+
+    sum += testScore;
+    n++;
+
+    if (testScore <= min)
+    min = testScore;
+
+    if (testScore >= max)
+    max = testScore;
+
+    else if (min <= -1)
+    min = 100;
+    x++;
+}
+
+average = sum / n;
+cout << "******** RESULTS ********" << endl;
+cout << "Number of tests: " << numberOfTests << endl;
+cout << "Average score  : " << fixed << setprecision(1) << static_cast<double>(average) << endl;
+cout << "Minimum score  : " << fixed << setprecision(1) << min << endl;
+cout << "Maximum score  : " << fixed << setprecision(1) << max << endl;
+
+}
